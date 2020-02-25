@@ -1,0 +1,18 @@
+/* 
+    Created on : 25/02/2020, 02:44:06 PM
+    Author     : MediaCode S.A.S. <info@mediacode.co>
+    File       : _footer.scss
+*/
+
+#footer {
+  // ...do stuffs
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding: 16px;
+  font-weight: bold;
+  background-color: color(grey);
+  border-top: 1px solid color(grey-dark);
+}

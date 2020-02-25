@@ -1,0 +1,101 @@
+/* 
+    Created on : 25/02/2020, 02:44:06 PM
+    Author     : MediaCode S.A.S. <info@mediacode.co>
+    File       : _mixins.scss
+*/
+
+/// Mixin for get color
+@function color($c) {
+  @return map-get($colors, $c);
+}
+
+/// Mixin for placeholder styles
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+/// Mixin for Extra-Small devices
+@mixin xs($mode: max) {
+  @if $mode == min {
+    @media (min-width: #{$screen-xs-min}) {
+      @content;
+    }
+  } @else if $mode == max {
+    @media (max-width: #{$screen-xs-max}) {
+      @content;
+    }
+  } @else {
+    @error "Unknown mode #{$mode}.";
+  }
+}
+
+/// Mixin for Small devices
+@mixin sm($mode: max) {
+  @if $mode == min {
+    @media (min-width: #{$screen-sm-min}) {
+      @content;
+    }
+  } @else if $mode == max {
+    @media (max-width: #{$screen-sm-max}) {
+      @content;
+    }
+  } @else {
+    @error "Unknown mode #{$mode}.";
+  }
+}
+
+/// Mixin for Medium devices
+@mixin md($mode: max) {
+  @if $mode == min {
+    @media (min-width: #{$screen-md-min}) {
+      @content;
+    }
+  } @else if $mode == max {
+    @media (max-width: #{$screen-md-max}) {
+      @content;
+    }
+  } @else {
+    @error "Unknown mode #{$mode}.";
+  }
+}
+
+/// Mixin for Large devices
+@mixin lg($mode: max) {
+  @if $mode == min {
+    @media (min-width: #{$screen-lg-min}) {
+      @content;
+    }
+  } @else if $mode == max {
+    @media (max-width: #{$screen-lg-max}) {
+      @content;
+    }
+  } @else {
+    @error "Unknown mode #{$mode}.";
+  }
+}
+
+/// Mixin for Extra large devices
+@mixin xl($mode: max) {
+  @if $mode == min {
+    @media (min-width: #{$screen-xl-min}) {
+      @content;
+    }
+  } @else if $mode == max {
+    @media (max-width: #{$screen-xl-max}) {
+      @content;
+    }
+  } @else {
+    @error "Unknown mode #{$mode}.";
+  }
+}

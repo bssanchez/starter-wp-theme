@@ -1,0 +1,23 @@
+/* 
+    Created on : 25/02/2020, 02:44:06 PM
+    Author     : MediaCode S.A.S. <info@mediacode.co>
+    File       : _home.scss
+*/
+
+#home-page {
+  .title {
+    @include md(max) {
+      font-size: 2em;
+    }
+
+    color: color(primary);
+    font-weight: 800;
+    font-size: 3em;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100vh;
+}
